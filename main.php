@@ -25,5 +25,6 @@
              Praesent at fringilla arcu. Orci varius natoque penatibus et magnis dis parturient 
              montes, nascetur ridiculus mus. In ut ornare arcu.</p>
     </main>
+    <script src="script/main.js"></script>
 </body>
 </html>
