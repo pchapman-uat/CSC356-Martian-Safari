@@ -1,0 +1,15 @@
+body {
+    background: linear-gradient(#f2bafa, #38013f)  no-repeat center center fixed;
+    padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.description {
+    background-color: rgba(255, 255, 255, 0.486);
+    border-radius: 100px;
+    padding: 3%;
+}
+
+h1{
+    text-align: center;
+}

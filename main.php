@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSC356 2.2</title>
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
     <h1>Insert Company Name Here</h1>
     <main>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Vestibulum eget neque bibendum, eleifend lectus non, 
             luctus ligula. Etiam lobortis orci velit, at pulvinar 
             turpis laoreet sed. Duis vel ante lectus. 
