@@ -18,3 +18,37 @@ h1{
     display: flex;
     justify-content: space-around;
 }
+
+
+.price span {
+    display: inline-block;
+    animation: bounce 1s ease infinite;
+    padding: 2px;
+}
+
+.price span:nth-child(1) { animation-delay: 0s; }
+.price span:nth-child(2) { animation-delay: 0.05s; }
+.price span:nth-child(3) { animation-delay: 0.1s; }
+.price span:nth-child(4) { animation-delay: 0.15s; }
+.price span:nth-child(5) { animation-delay: 0.2s; }
+.price span:nth-child(6) { animation-delay: 0.25s; }
+.price span:nth-child(7) { animation-delay: 0.3s; }
+.price span:nth-child(8) { animation-delay: 0.35s; }
+.price span:nth-child(9) { animation-delay: 0.4s; }
+.price span:nth-child(10) { animation-delay: 0.45s; }
+.price span:nth-child(11) { animation-delay: 0.5s; }
+.price span:nth-child(12) { animation-delay: 0.55s; }
+.price span:nth-child(13) { animation-delay: 0.6s; }
+.price span:nth-child(14) { animation-delay: 0.65s; }
+.price span:nth-child(15) { animation-delay: 0.7s; }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-3px);
+        background-color: rgb(247, 209, 43);
+    }
+    50% {
+        transform: translateY(3px);
+        background-color: rgb(243, 222, 101);
+    }
+}

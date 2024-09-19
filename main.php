@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-    <h1>Insert Company Name Here</h1>
+    <h1>Martian Safari</h1>
     <div class="logoDiv">
         <img src="assets/placeholder-logo.png">
     </div>
@@ -15,21 +15,17 @@
     <main>
         <section class="description">
             <h2>About Our Company</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Vestibulum eget neque bibendum, eleifend lectus non, 
-                luctus ligula. Etiam lobortis orci velit, at pulvinar 
-                turpis laoreet sed. Duis vel ante lectus. 
-                Mauris eget ornare felis. Nam sed ipsum ac nisi 
-                tristique vestibulum at sollicitudin leo. Morbi 
-                vestibulum eros ut leo placerat mollis. Nam rutrum, 
-                justo eu sodales placerat, ante sem auctor dolor, 
-                et ullamcorper elit dolor vitae purus. 
-                Aenean augue nunc, egestas posuere consequat id,
-                auctor vitae nibh. Sed a sem fermentum, 
-                molestie nibh vel, volutpat felis. 
-                Morbi maximus commodo est, nec sagittis mi placerat at. 
-                Praesent at fringilla arcu. Orci varius natoque penatibus et magnis dis parturient 
-                montes, nascetur ridiculus mus. In ut ornare arcu.</p>
+            <p>
+                In this Tour you will discover the wonder of the Red Planet Mars, enjoy the rocky terrain, amazing views, and stay at our luxry hotel! Here at mars the posiblities are endless.
+            </p>
+            <h2>Cost</h2>
+            <P>
+                For only the low low price of 
+                <span class="price">
+                    <span>$</span><span>9</span><span>9</span><span>9</span><span>.</span><span>9</span><span>9</span><span>M</span><span>i</span><span>l</span><span>l</span><span>i</span><span>o</span><span>n</span>
+                </span>
+                you too can visit mars and enjoy its wonders!
+            </P>
             </section>
     </main>
     <script src="script/main.js"></script>
