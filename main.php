@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
+    <!-- Name Generate by chat-gpt -->
     <h1>Martian Safari</h1>
     <div class="logoDiv">
         <img src="assets/placeholder-logo.png">
@@ -16,7 +17,7 @@
         <section class="description">
             <h2>About Our Company</h2>
             <p>
-                In this Tour you will discover the wonder of the Red Planet Mars, enjoy the rocky terrain, amazing views, and stay at our luxry hotel! Here at mars the posiblities are endless.
+            In this tour, you will embark on an unforgettable journey to discover the wonders of the Red Planet, Mars. As you explore the rocky terrain, you'll be captivated by the breathtaking views that stretch across the horizon, showcasing the planet's unique landscapes. Our luxury hotel provides the perfect retreat after a day of adventure, allowing you to relax in comfort while soaking in the incredible Martian scenery. Here on Mars, the possibilities are truly endless; whether you're hiking through ancient riverbeds, marveling at towering volcanoes, or stargazing under the pristine skies, each moment is filled with discovery and awe. Get ready for an experience that will ignite your imagination and leave you with memories to cherish for a lifetime!
             </p>
             <h2>Cost</h2>
             <P>
@@ -24,7 +25,7 @@
                 <span class="price">
                     <span>$</span><span>9</span><span>9</span><span>9</span><span>.</span><span>9</span><span>9</span><span>M</span><span>i</span><span>l</span><span>l</span><span>i</span><span>o</span><span>n</span>
                 </span>
-                you too can visit mars and enjoy its wonders!
+                you too can visit mars and enjoy its wonders! (Also aviable for 365 payments $2.73 Million)
             </P>
             </section>
     </main>
