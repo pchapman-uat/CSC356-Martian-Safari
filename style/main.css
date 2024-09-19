@@ -13,3 +13,8 @@ body {
 h1{
     text-align: center;
 }
+
+.logoDiv {
+    display: flex;
+    justify-content: space-around;
+}

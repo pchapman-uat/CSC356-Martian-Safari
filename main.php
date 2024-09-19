@@ -8,6 +8,10 @@
 </head>
 <body>
     <h1>Insert Company Name Here</h1>
+    <div class="logoDiv">
+        <img src="assets/placeholder-logo.png">
+    </div>
+
     <main>
         <section class="description">
             <h2>About Our Company</h2>
