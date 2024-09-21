@@ -1,5 +1,6 @@
 # Assignment 2.2: First PHP/JavaScript/CSS/HTML5 website
 
+This website can be viewed at: http://pchapman.infinityfreeapp.com/CSC356-2.2/main.php
 ## Guidelines
 
 1. Choose a name for your company.
