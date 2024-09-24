@@ -28,29 +28,30 @@
                 you too can visit mars and enjoy its wonders! (Also aviable for 365 payments $2.73 Million)
             </P>
         </section>
-        <section>
+        <section class="application">
             <h2>Pilot Application</h2>
             <form>
                 <div>
                     <label for="fName">First Name</label>
-                    <input id="fName" type="text">
+                    <input id="fName" type="text" required>
                 </div>
                 <div>
-                    <label for="lName">Last Name</label>
+                    <label for="lName" required>Last Name</label>
                     <input id="lName" type="text">
                 </div>
                 <div>
                     <label for="age">Age</label>
-                    <input id="age" type="number">
+                    <input id="age" type="number" required>
                 </div>
                 <div>
                     <label for="experince">Expereince</label>
-                    <input type="range" min="1" max="5" id="experince">
+                    <input type="range" min="1" max="5" id="experince" required>
                 </div>
                 <div>
                     <label for="agreement">TOS Agreement</label>
-                    <input type="checkbox" id="agreement">
+                    <input type="checkbox" id="agreement" required>
                 </div>
+                <button type="submit">Submit</button>
             </form>
         </section>
     </main>
