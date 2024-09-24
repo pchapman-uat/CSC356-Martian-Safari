@@ -1,18 +1,17 @@
-# Assignment 2.2: First PHP/JavaScript/CSS/HTML5 website
+# Assignment 3.2: JavaScript Web Application
 
 This website can be viewed at: http://pchapman.infinityfreeapp.com/CSC356-2.2/main.php
 ## Guidelines
 
-1. Choose a name for your company.
+1. Include JavaScript validation.
 
-2. Make a static home page for your company with a .php extension. 
+2. You may use POST or GET to transfer this information between pages.
 
-3. Write a short company description on your home page.
+3. There should be a link from each page to the home page.
 
-4. Create a CSS file with at least 2 selectors that is linked to from the home page.
+4. Include thorough code comments.
 
-5. Create a JS file that is linked to from the home page. It can be empty for now.
+5. Design a great User Experience.
 
-6. Comment your code. 
 
-7. Make a great user experience.
+To view previous assignments view the releases on GitHub
