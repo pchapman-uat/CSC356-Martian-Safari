@@ -15,7 +15,7 @@
 
     <main>
         <section class="description">
-            <h2>Thank you!</h2>
+            <h2> Welcome <?php echo $_POST["fName"] . " " . $_POST["lName"]; ?>!</h2>
             <p>Your fourm request has been recived and will be processed shortly</p>
         </section>
     </main>

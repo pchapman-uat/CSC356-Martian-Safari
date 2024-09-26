@@ -30,14 +30,14 @@
         </section>
         <section class="application">
             <h2>Pilot Application</h2>
-            <form>
+            <form id="application" action="result.php" method="post">
                 <div>
                     <label for="fName">First Name</label>
-                    <input id="fName" type="text" required>
+                    <input name="fName" id="fName" type="text" required>
                 </div>
                 <div>
                     <label for="lName" required>Last Name</label>
-                    <input id="lName" type="text">
+                    <input name="lName" id="lName" type="text">
                 </div>
                 <div>
                     <label for="age">Age</label>
@@ -51,7 +51,7 @@
                     <label for="agreement">TOS Agreement</label>
                     <input type="checkbox" id="agreement" required>
                 </div>
-                <button type="submit">Submit</button>
+                <input type="submit">
             </form>
         </section>
     </main>
