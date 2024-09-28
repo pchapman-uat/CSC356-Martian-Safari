@@ -1,6 +1,6 @@
 # Assignment 3.2: JavaScript Web Application
 
-This website can be viewed at: http://pchapman.infinityfreeapp.com/CSC356-Martian-Safari/main.php
+This website can be viewed at: http://pchapman.infinityfreeapp.com/CSC356-Martian-Safari/
 ## Guidelines
 
 1. Include JavaScript validation.
