@@ -8,6 +8,16 @@
         }
     }
 
+    function checkAge(): bool {
+        $age = $_POST["age"];
+        try {
+            $age = (int) $age;
+        } catch (TypeError) {
+            return false;
+        }
+        return $age >= 18;
+    }
+
 ?>
 
 <!DOCTYPE html>
