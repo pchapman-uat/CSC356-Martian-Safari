@@ -36,20 +36,20 @@
                     <input name="fName" id="fName" type="text" required>
                 </div>
                 <div>
-                    <label for="lName" required>Last Name</label>
+                    <label for="lName">Last Name</label>
                     <input name="lName" id="lName" type="text">
                 </div>
                 <div>
                     <label for="age">Age</label>
-                    <input id="age" type="number" required>
+                    <input name="age" id="age" type="text" required>
                 </div>
                 <div>
                     <label for="experince">Expereince</label>
-                    <input type="range" min="1" max="5" id="experince" required>
+                    <input name="experince" type="range" min="1" max="5" id="experince" required>
                 </div>
                 <div>
                     <label for="agreement">TOS Agreement</label>
-                    <input type="checkbox" id="agreement" required>
+                    <input name="agreement" type="checkbox" id="agreement" required>
                 </div>
                 <input type="submit">
             </form>

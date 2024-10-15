@@ -1,3 +1,15 @@
+<?php
+    // Display all post keys 
+    function getKeys(){
+        $post_keys = array_keys($_POST);
+
+        foreach ($post_keys as $key) {
+            echo $key . "<br>";
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +19,6 @@
     <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-
     <h1>Martian Safari</h1>
     <div class="logoDiv">
         <img src="assets/placeholder-logo.png">
