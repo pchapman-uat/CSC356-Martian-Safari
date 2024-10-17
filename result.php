@@ -92,6 +92,29 @@
         return $result;
     }
 
+    function color($r,$g,$b){
+        return "rgb($r,$g,$b)";
+    }
+
+    function calcColor($r1,$g1,$b1,$r2,$g2,$b2, $percent){
+
+        if($percent == 0){
+            return color($r1,$g1,$b1);
+        } else if ($percent == 1){
+            return color($r2,$g2,$b2);
+        }
+
+        $diffR = ($r2 -$r1) * $percent;
+        $diffG = ($g2 -$g1) * $percent;
+        $diffB = ($b2 -$b1) * $percent;
+
+        $newR = $r1+ $diffR;
+        $newG = $g1+ $diffG;
+        $newB = $b1+ $diffB;
+
+        return color($newR,$newG,$newB);
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -111,7 +134,7 @@
     <main>
         <section class="description">
             <h2> Welcome <?php echo $_POST["fName"] . " " . $_POST["lName"]; ?>!</h2>
-            <h2>Your chance of getting accepted is: <?php echo calcChance()?></h2>
+            <h2 style="color: <?php echo calcColor(255,0,0,0,255,0, applicationChance())?>">Your chance of getting accepted is: <?php echo calcChance()?></h2>
             <p>Your fourm request has been recived and will be processed shortly</p>
         </section>
     </main>
