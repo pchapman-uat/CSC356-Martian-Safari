@@ -1,4 +1,9 @@
 <?php
+    // If this was not from a post request, redirect to the index page
+    if($_SERVER['REQUEST_METHOD'] != 'POST'){
+        header('location: /index.php');
+        die();
+    }
     // Display all post keys 
     function getKeys(): void{
         // Convert post keys to array
@@ -92,26 +97,33 @@
         return $result;
     }
 
+    // Convert color values to a rgb string
     function color($r,$g,$b){
         return "rgb($r,$g,$b)";
     }
 
+    // Calculate the color based on the rgb values and percentage
     function calcColor($r1,$g1,$b1,$r2,$g2,$b2, $percent){
 
+        // If the percent is 0, return the low color
+        // Else return the high color
         if($percent == 0){
             return color($r1,$g1,$b1);
         } else if ($percent == 1){
             return color($r2,$g2,$b2);
         }
-
+        
+        // Find the difference based on the percentage
         $diffR = ($r2 -$r1) * $percent;
         $diffG = ($g2 -$g1) * $percent;
         $diffB = ($b2 -$b1) * $percent;
 
+        // Increase/decreese the values based on the difference
         $newR = $r1+ $diffR;
         $newG = $g1+ $diffG;
         $newB = $b1+ $diffB;
 
+        // Return a new color string
         return color($newR,$newG,$newB);
 
     }
