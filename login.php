@@ -8,26 +8,29 @@
     <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
-    <h1>Martian Safari</h1>
-    <div class="logoDiv">
-        <img src="assets/placeholder-logo.png">
-    </div>
+    <header>
+        <h1>Martian Safari</h1>
+        <div class="logoDiv">
+            <img src="assets/placeholder-logo.png">
+        </div>
+    </header>
+
     <section class="application">
         <h2>Login</h2>
-    <form class="form">
-        <span>
-            <label for="uerID">User ID</label>
-            <input id="userID" name="userID" type="text" required>
-        </span>
-        <span>
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" required>
-        </span>
-        <span>
-            <button type="submit">Submit</button>
-        </span>
-       
-    </form>
+        <form class="form">
+            <span>
+                <label for="uerID">User ID</label>
+                <input id="userID" name="userID" type="text" required>
+            </span>
+            <span>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" required>
+            </span>
+            <span>
+                <button type="submit">Submit</button>
+            </span>
+        
+        </form>
     </section>
 </body>
 </html>
