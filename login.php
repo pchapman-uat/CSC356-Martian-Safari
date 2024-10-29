@@ -1,3 +1,31 @@
+<?php
+
+    function checkRequest(){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            include signIn($_POST["userID"], $_POST["password"]);
+        }else {
+            include "static/signin/signInForm.html";
+        }
+
+    }
+
+
+    function signIn(string $username, string $password): string{
+        $result = validateInfo($username, $password);
+        if($result){
+            return "static/signin/signInSucess.html";
+        }
+        else {
+            return "static/signin/signInFailed.html";
+        }
+    }
+    function validateInfo(string $username, string $password){
+        // TODO Add connection to datbase
+        return $username != "" && $password != "";
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,21 +44,7 @@
     </header>
 
     <section class="application">
-        <h2>Login</h2>
-        <form id="form">
-            <span>
-                <label for="uerID">User ID</label>
-                <input id="userID" name="userID" type="text" required>
-            </span>
-            <span>
-                <label for="password">Password</label>
-                <input id="password" type="password" name="password" required>
-            </span>
-            <span>
-                <button type="submit">Submit</button>
-            </span>
-        
-        </form>
+       <?php echo checkRequest()?>
     </section>
 </body>
 <script src="script/login.js"></script>

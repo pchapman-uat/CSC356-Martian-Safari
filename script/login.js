@@ -6,5 +6,4 @@ form.addEventListener("submit", formSubmit)
  */
 async function formSubmit(event) {
     console.log("Form Subbited")
-    event.preventDefault();
 }
