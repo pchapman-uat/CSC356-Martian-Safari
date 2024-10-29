@@ -17,7 +17,7 @@
 
     <section class="application">
         <h2>Login</h2>
-        <form class="form">
+        <form id="form">
             <span>
                 <label for="uerID">User ID</label>
                 <input id="userID" name="userID" type="text" required>
@@ -33,4 +33,5 @@
         </form>
     </section>
 </body>
+<script src="script/login.js"></script>
 </html>
