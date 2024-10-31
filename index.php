@@ -8,10 +8,7 @@
 </head>
 <body>
     <!-- Name Generate by chat-gpt -->
-    <h1>Martian Safari</h1>
-    <div class="logoDiv">
-        <img src="assets/placeholder-logo.png">
-    </div>
+     <?php include "static/header.html";?>
 
     <main>
         <section class="description">

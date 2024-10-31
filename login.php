@@ -36,12 +36,7 @@
     <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
-    <header>
-        <h1>Martian Safari</h1>
-        <div class="logoDiv">
-            <img src="assets/placeholder-logo.png">
-        </div>
-    </header>
+    <?php include "./static/header.html";?>
 
     <section class="application">
        <?php echo checkRequest()?>
