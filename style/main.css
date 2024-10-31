@@ -55,6 +55,11 @@ form > * {
     margin: 5px;
 }
 
+form > div:has(input:required) label::after{
+    content: " *";
+    color: red;
+}
+
 nav {
     display: flex;
     align-items: center;
