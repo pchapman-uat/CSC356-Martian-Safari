@@ -13,7 +13,7 @@
     function signIn(string $username, string $password): string{
         $result = validateInfo($username, $password);
         if($result){
-            return "static/signin/signInSucess.html";
+            return "static/signin/signInSucess.php";
         }
         else {
             return "static/signin/signInFailed.html";
