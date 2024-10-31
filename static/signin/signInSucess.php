@@ -1,3 +1,9 @@
+<?php
+    function getUserName(){
+        return $_POST["userID"];
+    }
+?>
+
 <h3>
-    You have sucessfully signed in!
+    Welcome <?php echo getUserName()?> You have sucessfully signed in!
 </h3>
