@@ -54,6 +54,27 @@ section {
 form > * {
     margin: 5px;
 }
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+nav > button {
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: large;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+nav > button:hover{
+    background-color: rgb(108, 255, 186);
+}
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(-3px);
