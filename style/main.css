@@ -55,9 +55,17 @@ form > * {
     margin: 5px;
 }
 
+form * {
+    transition: linear 0.2s;
+}
+
 form > div:has(input:required) label::after{
     content: " *";
     color: red;
+}
+
+form > div:has(input:hover, input:focus) label {
+    background-color: rgba(236, 224, 44, 0.384);
 }
 
 nav {
