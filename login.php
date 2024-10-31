@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
-    <?php include "./static/header.html";?>
+    <?php include "static\header.html";?>
 
     <section class="application">
        <?php echo checkRequest()?>
