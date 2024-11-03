@@ -4,20 +4,23 @@
  * @see {@link validateForm} - Validate the username and password
  */
 async function formSubmit(event) {
-    // Prevent the default actions
-    event.preventDefault();
+    console.log("Form Submitted")
 
     // Get the username and password element from the form element
-    const username = form.querySelector("#username");
+    const username = form.querySelector("#userID");
     const password = form.querySelector("#password");
 
     // Run the validate form function
-    const reasons = validateForm(username, password);
+    const reasons = validateForm(username.value, password.value);
     const result = document.getElementById("result")
+    result.innerHTML = ""
     // Check if there are any failed reasons
+    console.log(reasons.length)
     if(reasons.length > 0){
+        // Prevent the default actions
+        event.preventDefault();
         // For each reason that is invalid
-        for(let i = 0; reasons.length; i++){
+        for(let i = 0; i < reasons.length; i++){
             // Create a element
             let element = document.createElement("p");
             // Add the reason text
@@ -53,3 +56,5 @@ function validateForm(username, password){
     // Return the reasons
     return reasons;
 }
+
+document.getElementById("form").addEventListener("submit", formSubmit);
