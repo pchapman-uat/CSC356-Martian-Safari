@@ -24,6 +24,7 @@
     function addToSession($result){
         $_SESSION["fName"] = $result["fName"];
         $_SESSION["lName"] = $result["lName"];
+        $_SESSION["signedIn"] = true;
     }
     function validateInfo(string $username, string $password){
         $data = getConfig();

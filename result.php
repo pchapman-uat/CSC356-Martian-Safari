@@ -1,7 +1,7 @@
 <?php
     // If this was not from a post request, redirect to the index page
     if($_SERVER['REQUEST_METHOD'] != 'POST'){
-        header('location: /index.php');
+        header('location: index.php');
         die();
     }
     // Display all post keys 
