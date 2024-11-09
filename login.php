@@ -21,7 +21,36 @@
     }
     function validateInfo(string $username, string $password){
         // TODO Add connection to datbase
-        return $username != "" && $password != "";
+        $data = getConfig();
+
+        $dbConn = mysqli_connect($data["hostname"], $data["username"], $data["password"], $data["databaseName"]);
+
+        if(!$dbConn){
+            echo "Connection Failed";
+        }
+        echo "Connected Successfully";
+
+        $sql = "SELECT * FROM Users WHERE UID='$username' AND password='$password'";
+        // echo $sql;
+        $result = mysqli_query($dbConn, $sql);
+        // return;
+        $check = mysqli_fetch_array($result);
+        return isset($check);
+    }
+    function getUserName(){
+        return $_POST["userID"];
+    }
+
+    function getPassword(){
+        return $_POST["password"];
+    }
+
+    function getConfig(){
+        $str = file_get_contents(__DIR__ . '/config/config.json');
+        return json_decode($str, true);
+    }
+    function connectSQL(){
+         
     }
 ?>
 
