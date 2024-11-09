@@ -98,3 +98,7 @@ nav > button:hover{
         background-color: rgb(243, 222, 101);
     }
 }
+
+.userInfo {
+    text-align: center;
+}

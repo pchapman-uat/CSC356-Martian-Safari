@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +10,11 @@
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-    <!-- Name Generate by chat-gpt -->
-     <?php include "static/header.html";?>
-
+     <?php 
+        include "static/header.html";
+        include "static/user.php";
+     ?>
+    
     <main>
         <section class="description">
             <h2>About Our Company</h2>
