@@ -1,3 +1,3 @@
 <h3>
-    Welcome  You have sucessfully signed in!
+    Welcome <?php echo $_SESSION["fName"]?>  You have sucessfully signed in!
 </h3>

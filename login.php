@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     function checkRequest(){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             include signIn($_POST["userID"], $_POST["password"]);
@@ -12,12 +12,18 @@
 
     function signIn(string $username, string $password): string{
         $result = validateInfo($username, $password);
-        if($result){
+        if(isset($result)){
+            addToSession($result);
             return "static/signin/signInSucess.php";
         }
         else {
             return "static/signin/signInFailed.html";
         }
+    }
+
+    function addToSession($result){
+        $_SESSION["fName"] = $result["fName"];
+        $_SESSION["lName"] = $result["lName"];
     }
     function validateInfo(string $username, string $password){
         // TODO Add connection to datbase
@@ -35,7 +41,7 @@
         $result = mysqli_query($dbConn, $sql);
         // return;
         $check = mysqli_fetch_array($result);
-        return isset($check);
+        return $check;
     }
     function getUserName(){
         return $_POST["userID"];
