@@ -1,9 +1,7 @@
 <?php 
     session_start();
-    if(isset($_SESSION["signedIn"])){
-        echo "Logged In";
-    }else {
-        header('location: index.php');
+    if(!isset($_SESSION["signedIn"])){
+        header('location: login.php');
         die();
     }
 ?>
@@ -18,9 +16,14 @@
     <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
+    <?php 
+        include './static/header.html';
+        include './static/user.php';
+    ?>
     <main>
         <section class="description">
             <h3>This is information about our events!</h3>
+            <p>Currently we are not done with this section so be sure to check back later!</p>
         </section>
       
     </main>
