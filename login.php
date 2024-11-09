@@ -26,15 +26,14 @@
         $_SESSION["lName"] = $result["lName"];
     }
     function validateInfo(string $username, string $password){
-        // TODO Add connection to datbase
         $data = getConfig();
 
         $dbConn = mysqli_connect($data["hostname"], $data["username"], $data["password"], $data["databaseName"]);
 
         if(!$dbConn){
             echo "Connection Failed";
+            return;
         }
-        echo "Connected Successfully";
 
         $sql = "SELECT * FROM Users WHERE UID='$username' AND password='$password'";
         // echo $sql;
