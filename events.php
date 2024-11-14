@@ -17,8 +17,8 @@
 </head>
 <body>
     <?php 
-        include './static/header.html';
-        include './static/user.php';
+        include 'static/header.html';
+        include 'static/user.php';
     ?>
     <main>
         <section class="description">
