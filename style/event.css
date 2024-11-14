@@ -6,9 +6,15 @@
 
 .event {
     display: flex;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
+    transition: flex-grow 1s linear;
+    flex-wrap: wrap;
 }
+
+.content {
+    max-width: 500px;
+}
+
 .imgDiv {
     display: flex;
     flex-direction: column;
@@ -16,7 +22,6 @@
 }
 
 .imgDiv > img {
-    margin-left: 100px;
     height: 200px;
+    padding: 10px;
 }
-
