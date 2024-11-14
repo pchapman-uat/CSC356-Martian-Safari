@@ -1,0 +1,22 @@
+.events {
+    background-color: rgb(138, 138, 240);
+    padding: 5%;
+    border-radius: 100px;
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+
+}
+.imgDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.imgDiv > img {
+    margin-left: 100px;
+    height: 200px;
+}
+
