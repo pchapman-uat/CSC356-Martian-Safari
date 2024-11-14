@@ -1,9 +1,17 @@
 <?php 
-    session_start();
-    if(!isset($_SESSION["signedIn"])){
-        header('location: login.php');
-        die();
+
+    // If this value is true, it will bypass checking if the user is signined in using the session
+    $GLOBALS['debug'] = true;
+    function checkSession(){
+        if($GLOBALS['debug']) return;
+        session_start();
+        if(!isset($_SESSION["signedIn"])){
+            header('location: login.php');
+            die();
+        }
     }
+
+    checkSession();
 ?>
 
 
@@ -14,6 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/event.css">
 </head>
 <body>
     <?php 
@@ -25,7 +34,14 @@
             <h3>This is information about our events!</h3>
             <p>Currently we are not done with this section so be sure to check back later!</p>
         </section>
-      
+
+        <section class="events">
+            <div class="event">
+                <h4>Example Title</h4>
+                <h5>Example Subtitle</h5>
+                <img src="https://placehold.co/600x400">
+            </div>
+        </section>
     </main>
 
 </body>
