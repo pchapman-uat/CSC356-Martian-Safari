@@ -43,6 +43,14 @@
     function makeEvent($header, $subheader, $text){
         include "static/event.php";
     }
+
+    function exampleEvents(){
+        makeEvent("Event 1", "10/24/50", "FFFF FFFF  FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF ");
+        makeEvent("Special Event Event", "10/24/50", "placeholder");
+        makeEvent("Cool Event", "10/24/50", "placeholder");
+        makeEvent("Hello World", "10/24/50", "placeholder");
+        makeEvent("Event 6", "10/24/50", "placeholder");
+    }
 ?>
 
 
@@ -67,7 +75,8 @@
         </section>
 
         <section class="events">
-            <?php getEvents()?>
+            <?//php getEvents()?>
+            <?php exampleEvents();?>
         </section>
     </main>
 
