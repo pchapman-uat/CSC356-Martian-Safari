@@ -6,13 +6,14 @@
 
 .event {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     transition: flex-grow 1s linear;
     flex-wrap: wrap;
 }
 
 .content {
     max-width: 500px;
+    min-width: 300px;
 }
 
 .imgDiv {
