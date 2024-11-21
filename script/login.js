@@ -12,7 +12,8 @@ async function formSubmit(event) {
 
     // Run the validate form function
     const reasons = validateForm(username.value, password.value);
-    const result = document.getElementById("result")
+    // const result = document.getElementById("result")
+    const result = $("#result");
     result.innerHTML = ""
     // Check if there are any failed reasons
     console.log(reasons.length)
@@ -22,11 +23,11 @@ async function formSubmit(event) {
         // For each reason that is invalid
         for(let i = 0; i < reasons.length; i++){
             // Create a element
-            let element = document.createElement("p");
+            let element = $("<p>", "")
             // Add the reason text
-            element.textContent = reasons[i];
+            element.text(reasons[i])
             // Append the element
-            result.appendChild(element);
+            result.append(element);
         }
     }
 }
@@ -57,4 +58,8 @@ function validateForm(username, password){
     return reasons;
 }
 
-document.getElementById("form").addEventListener("submit", formSubmit);
+
+// jQuery replacement for the following 
+// document.getElementById("form").addEventListener("submit", formSubmit);
+
+$('#form').submit(formSubmit)
