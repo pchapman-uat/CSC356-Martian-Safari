@@ -40,7 +40,7 @@
 
     checkSession();
 
-    function makeEvent($header, $subheader, $text){
+    function makeEvent($header, $subheader, $text, $url = "https://placehold.co/600x400"){
         include "static/event.php";
     }
 
@@ -79,6 +79,5 @@
             <?php exampleEvents();?>
         </section>
     </main>
-
 </body>
 </html>
