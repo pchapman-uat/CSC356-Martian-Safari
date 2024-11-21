@@ -6,6 +6,6 @@
         </div>
 
         <div class="imgDiv">
-                <img src="https://placehold.co/600x400">
+                <img src=<?php echo $url?>>
         </div>
 </div>
