@@ -1,20 +1,20 @@
 console.log("Hello World!")
 
-document.getElementById("application", e => validateForm(e))
+$("#application").submit(validateForm);
 
 /**
  * @param {SubmitEvent} event 
  */
 function validateForm(event){
-    const form = document.getElementById("application");
+    const form = $("application");
 
-    const fName = document.getElementById("fName");
-    const lName = document.getElementById("lName");
-    const age = document.getElementById("age");
-    const experince = document.getElementById("experince");
-    const agreement = document.getElementById("agreement");
+    const fName = $("#fName");
+    const lName = $("#lName");
+    const age = $("#age");
+    const experince = $("#experince");
+    const agreement = $("#agreement");
 
-    if(agreement.checked == false){
+    if(agreement == false){
         alert("Did not agree to TOS");
         event.preventDefault();
         return;
