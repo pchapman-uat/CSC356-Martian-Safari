@@ -1,3 +1,5 @@
+<!-- Included in events, employees, and additional pages -->
+
 <div class="event">
     <div class="content">
         <h4><?php echo $header ?></h4>
