@@ -1,4 +1,3 @@
-console.log("Hello World!")
 
 $("#application").submit(validateForm);
 
