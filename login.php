@@ -1,6 +1,9 @@
 <?php
     session_start();
+    // Check if this page is being requested by a POST request
     function checkRequest(){
+        // If the request is a POST request, sign in the user
+        // Else display the sign in form
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             include signIn($_POST["userID"], $_POST["password"]);
         }else {
@@ -9,24 +12,36 @@
 
     }
 
+    include_once "global.php";
 
+
+    // Sign in the user
     function signIn(string $username, string $password): string{
+        // Validate the username and password
         $result = validateInfo($username, $password);
+        // Check if there is a value 
         if(isset($result)){
+            // Add the data to the session
             addToSession($result);
+            // Display the sign in success page
             return "static/signin/signInSucess.php";
         }
         else {
+            // Display the sign in failed page
             return "static/signin/signInFailed.html";
         }
     }
 
+    // Add values to the session
     function addToSession($result){
         $_SESSION["fName"] = $result["fName"];
         $_SESSION["lName"] = $result["lName"];
         $_SESSION["signedIn"] = true;
     }
+
+    // Validate the username and password
     function validateInfo(string $username, string $password){
+        // Get the config data (from global.php)
         $data = getConfig();
 
         $dbConn = mysqli_connect($data["hostname"], $data["username"], $data["password"], $data["databaseName"]);
@@ -36,24 +51,22 @@
             return;
         }
 
+        // Select all data from the Users table where the username and password match
         $sql = "SELECT * FROM Users WHERE UID='$username' AND password='$password'";
-        // echo $sql;
         $result = mysqli_query($dbConn, $sql);
-        // return;
         $check = mysqli_fetch_array($result);
+
+        // Return the data if it exists
         return $check;
     }
+
+    // Get the username from the POST request
     function getUserName(){
         return $_POST["userID"];
     }
-
+    // Get the password from the POST request
     function getPassword(){
         return $_POST["password"];
-    }
-
-    function getConfig(){
-        $str = file_get_contents(__DIR__ . '/config/config.json');
-        return json_decode($str, true);
     }
 ?>
 
