@@ -44,7 +44,7 @@
         // Get the config data (from global.php)
         $data = getConfig();
 
-        $dbConn = mysqli_connect($data["hostname"], $data["username"], $data["password"], $data["databaseName"]);
+        $dbConn = mysqli_connect($data->hostname, $data->username, $data->password, $data->databaseName);
 
         if(!$dbConn){
             echo "Connection Failed";
