@@ -21,6 +21,10 @@
     include_once "global.php";
 
     function getEvents(){
+        if($GLOBALS["debug"]){
+            exampleEvents();
+            return;
+        }
         //  Get the config data (from global.php)
         $data = getConfig();
         // Connect to the database using the config data
@@ -90,7 +94,6 @@
         <section class="events">
             <!-- If on hosted site uncomment the line below -->
             <?php getEvents()?>
-            <?//php exampleEvents();?>
         </section>
     </main>
 </body>
