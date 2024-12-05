@@ -1,11 +1,12 @@
 <?php 
 
+    // Include the global PHP which handles config, database connection, and more
     include_once "global.php";
 
-    // Check if the user is signed in, if not, redirect to the login page
     function checkSession(){
-        // If debug is true, don't check if the user is signed in
+        // Get the config (From global.php)
         $config = getConfig();
+        // If we are debuging bypass redirect to login
         if($config->debug==true) return;
         // Start the session
         session_start();
@@ -17,16 +18,24 @@
         }
     }
 
+    /**
+     * Get the events from the "Tours" table in the datbase
+     * @return void
+     */
     function getEvents(){
+        // Get the data from the database table "Tours"
         $result = getData("Tours");
 
+        // If there is data
         if(isset($result)){
             // Get the length of the response rows
             $len = mysqli_num_rows($result);
 
             // For each response
             for($i = 0; $i < $len; $i++){
+                // Get the data from the row
                 $data = mysqli_fetch_array($result);
+                // Make an event
                 makeEvent($data["name"], $data["date"], $data["description"]);
             }
         }
@@ -63,7 +72,6 @@
         </section>
 
         <section class="events">
-            <!-- If on hosted site uncomment the line below -->
             <?php getEvents()?>
         </section>
     </main>
