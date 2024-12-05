@@ -26,8 +26,8 @@
 
             // For each response
             for($i = 0; $i < $len; $i++){
-            $data = mysqli_fetch_array($result);
-            makeEvent($data["name"], $data["date"], $data["description"]);
+                $data = mysqli_fetch_array($result);
+                makeEvent($data["name"], $data["date"], $data["description"]);
             }
         }
     }
