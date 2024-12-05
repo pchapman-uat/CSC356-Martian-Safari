@@ -6,8 +6,6 @@
 
         $result = getData("Employees");
         
-        
-        
         if(isset($result)){
             // Get the length of the response rows
             $len = mysqli_num_rows($result);

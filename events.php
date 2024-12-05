@@ -1,12 +1,12 @@
 <?php 
 
-    // If this value is true, it will bypass checking if the user is signed in using the session
-    $GLOBALS['debug'] = true;
+    include_once "global.php";
 
     // Check if the user is signed in, if not, redirect to the login page
     function checkSession(){
         // If debug is true, don't check if the user is signed in
-        if($GLOBALS['debug']) return;
+        $config = getConfig();
+        if($config->debug==true) return;
         // Start the session
         session_start();
         // Check if the user is signed in
@@ -17,38 +17,18 @@
         }
     }
 
-    // Include global for database connections
-    include_once "global.php";
-
     function getEvents(){
-        if($GLOBALS["debug"]){
-            exampleEvents();
-            return;
-        }
-        //  Get the config data (from global.php)
-        $data = getConfig();
-        // Connect to the database using the config data
-        $dbConn = mysqli_connect($data->hostname, $data->username, $data->password, $data->databaseName);
+        $result = getData("Tours");
 
-        // If  the connection fails, display an error message and return
-        if(!$dbConn){
-            echo "Connection Failed";
-            return;
-        }
+        if(isset($result)){
+            // Get the length of the response rows
+            $len = mysqli_num_rows($result);
 
-        // Select all data from the Tours table
-        $sql = "SELECT * FROM Tours";
-
-        $result = mysqli_query($dbConn, $sql);
-        
-
-        // Get the length of the response rows
-        $len = mysqli_num_rows($result);
-
-        // For each response make an event
-        for($i = 0; $i < $len; $i++){
+            // For each response
+            for($i = 0; $i < $len; $i++){
             $data = mysqli_fetch_array($result);
             makeEvent($data["name"], $data["date"], $data["description"]);
+            }
         }
     }
 
@@ -58,15 +38,6 @@
     // Create an event, URL defaults to a placeholder image
     function makeEvent($header, $subheader, $text, $url = "https://placehold.co/600x400"){
         include "static/event.php";
-    }
-
-    // Create example events
-    function exampleEvents(){
-        makeEvent("Event 1", "10/24/50", "FFFF FFFF  FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF ");
-        makeEvent("Special Event Event", "10/24/50", "placeholder");
-        makeEvent("Cool Event", "10/24/50", "placeholder");
-        makeEvent("Hello World", "10/24/50", "placeholder");
-        makeEvent("Event 6", "10/24/50", "placeholder");
     }
 ?>
 
