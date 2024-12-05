@@ -31,7 +31,10 @@
     <link rel="stylesheet" href="./style/event.css">
 </head>
 <body>
-    <?php include "static/header.html"?>
+    <?php 
+        include 'static/header.html';
+        include 'static/user.php';
+    ?>
     <main>
         <section class="description">
             <h3>This is information about our Spacecraft!</h3>
