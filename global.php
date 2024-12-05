@@ -1,21 +1,57 @@
 <?
-    // Get config data from config.json
-    function getConfig(){
+
+    /**
+     * Get config data from config.json
+     * @return Config
+     */
+    function getConfig(): Config{
         $str = file_get_contents(__DIR__ . '/config/config.json');
         $json = json_decode($str, true);
 
         return new Config($json);
     }
 
+    /**
+     * Config class based on the structure from the config.json
+     */
     class Config {
+        /**
+         * Username for the Database connection
+         * @var string
+         */
         public $username = "";
+        /**
+         * Host name for the database connection
+         * @var string
+         */
         public $hostname = "";
+        /**
+         * Password for the database connection
+         * @var string
+         */
         public $password = "";
+        /**
+         * Port for the database connection
+         * @var int
+         */
         public $port = 0;
+        /**
+         * Name for the database connection
+         * @var string
+         */
         public $databaseName = "";
+        /**
+         * If the project is in debug mode
+         * - This determins if features such as signing in should be disabled
+         * @var boolean
+         */
         public $debug = false;
 
-        public function __construct($var) {
+        /**
+         * Constructor for the Config Object
+         * @param array $var
+         */
+        public function __construct(array $var) {
             $this->username = $var["username"];
             $this->hostname = $var["hostname"];
             $this->password = $var["password"];
@@ -26,9 +62,18 @@
     }
 
 
+    /**
+     * Get the data from the requested table
+     * - If the config is set to debug mode it will create example elements
+     * @param string $table - The name of the Table to get data from
+     * @return mysqli_result|null - Returns null if connection failed or debug was enabled
+     */
     function getData(String $table){
 
+        // Get the config data
         $data = getConfig();
+
+        // If debuging create eample elements and end execution
         if($data->debug == true){
             exampleElement();
             return;
@@ -42,24 +87,26 @@
             return;
         }
 
-        // Select all data from the employees table
+        // Select all data from the inputed  table
         // NOTE: This should be changed to a specific query
         $sql = "SELECT * FROM `$table`";
 
+        // Get the result from the connection
         $result = mysqli_query($dbConn, $sql);
         
+        // Return the result
         return $result;
     }
 
-    // Create an employee, URL defaults to a placeholder image
+    // Create an element, URL defaults to a placeholder image
     function makeElement($header, $subheader, $text, $url = "https://placehold.co/600x400"){
         // Include the event template page, parameters are automatically passed
         include "static/event.php";
     }
 
-    // Create example employees
+    // Create example elements
     function exampleElement(){
-        // Create 5 employees
+        // Create 5 elements
         makeElement("Header 1","subHeader 1" , "");
         makeElement("Header 2", "subHeader 2", "");
         makeElement("Header 3", "subHeader 3", "");
