@@ -75,7 +75,7 @@
 
         // If debuging create eample elements and end execution
         if($data->debug == true){
-            exampleElement();
+            exampleElement(5);
             return;
         }
 
@@ -105,11 +105,9 @@
     }
 
     // Create example elements
-    function exampleElement(){
-        // Create 5 elements
-        makeElement("Header 1","subHeader 1" , "");
-        makeElement("Header 2", "subHeader 2", "");
-        makeElement("Header 3", "subHeader 3", "");
-        makeElement("Header 4", "subHeader 4", "");
-        makeElement("Header 5", "subHeader 5", "");
+    function exampleElement(int $count){
+        // 
+        for($i=1; $i<=$count;$i++){
+            makeElement("Header ".$i, "Sub Header".$i, "");
+        }
     }
