@@ -104,9 +104,12 @@
         include "static/event.php";
     }
 
-    // Create example elements
+    /**
+     * Create example elements
+     * @param int $count - Total number of elements to create
+     * @return void
+     */
     function exampleElement(int $count){
-        // 
         for($i=1; $i<=$count;$i++){
             makeElement("Header ".$i, "Sub Header".$i, "");
         }
