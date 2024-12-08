@@ -1,11 +1,11 @@
-# Assignment 12.2: Final Project Checkpoint
+# Assignment 13.2: Final Project JSON or XML
 
 This website can be viewed at: http://pchapman.infinityfreeapp.com/CSC356-Martian-Safari/
 ## Guidelines
 
-1. Your website should be at least half way to completion. 
+1. You must use JSON or XML on a PHP page.
 
-2. Include thorough code comments. 
+2. Include thorough code comments.
 
 3. Design a great User Experience.
 
