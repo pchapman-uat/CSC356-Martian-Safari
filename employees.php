@@ -40,6 +40,7 @@
     <title>Martian Safari - Employees</title>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/event.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 </head>
 <body>
     <?php 
