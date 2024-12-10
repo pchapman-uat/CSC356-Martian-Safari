@@ -12,6 +12,7 @@ body {
 
 h1{
     text-align: center;
+    font-family: Space;
 }
 
 .logoDiv {
@@ -107,4 +108,9 @@ nav > button:hover{
 
 .userInfo {
     text-align: center;
+}
+
+@font-face {
+    font-family: Space;
+    src: url(../assets/SPACE\ EXPLORER.otf);
 }
