@@ -12,6 +12,8 @@ This website can be viewed at: http://pchapman.infinityfreeapp.com/CSC356-Martia
 
 To view previous assignments view the releases on GitHub
 
-## Font
+## Assets
 
-https://www.1001fonts.com/space-explorer-font.html
+* Font - https://www.1001fonts.com/space-explorer-font.html
+
+* Icon - https://www.freepik.com/icon/mars_2530892
