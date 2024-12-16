@@ -95,6 +95,21 @@ nav > button:hover{
     background-color: rgb(108, 255, 186);
 }
 
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.headerContainer > * {
+    margin: 10px;
+}
+.headerContainer > img {
+    width: 100px;
+    height: 100px;
+}
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(-3px);
