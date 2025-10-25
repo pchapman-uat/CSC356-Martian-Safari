@@ -1,8 +1,11 @@
 # Assignment 14.2: Final Project Code
 
-This is the final project for the University of Advancing Technology, for class CSC356: Designing Website Interfaces II. This website is over a fictional Martian Safari, the user can apply to work at the safari, sign into an existing account, view tours, employees, spacecraft and more.
+[![Static Badge](https://img.shields.io/badge/Objective-ACS.1-purple)](https://pchapman-uat.github.io/Boards/ACS/#objective1)
 
-This website can be viewed at: http://pchapman.infinityfreeapp.com/CSC356-Martian-Safari/
+This is the final project for the University of Advancing Technology, for class CSC356: Designing Website Interfaces II. This website is about a fictional Martian Safari. The user can apply to work at the safari, sign into an existing account, view tours, employees, spacecraft, and more.
+
+> [!WARNING]
+> This site is no longer available and must be hosted locally. 
 
 ## Overview
 
@@ -15,7 +18,7 @@ Create a web application game or application of your choice. It must include the
 - PHP
 - Data retrieved from MySQL DB and displayed on at least 1 PHP web page
 - Implement a Testing strategy involving reliability, accuracy, and UI testing. Demonstrate the testing strategy with screenshots or a video.
-- The application should not be something just to demonstrate the requirements, it should "do" something.
+- The application should not be something just to demonstrate the requirements; it should "do" something.
 
 ## Guidelines 
 
